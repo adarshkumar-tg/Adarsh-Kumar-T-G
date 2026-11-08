@@ -2,256 +2,229 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Adarsh Kumar T G, software engineer in Bangalore with 2 years of experience in C#, WPF and MVVM, building medical imaging and radiotherapy software.">
+<meta name="description" content="Adarsh Kumar T G, software engineer in Bangalore building medical imaging and radiotherapy software with C#, WPF and MVVM.">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Adarsh Kumar T G – Software Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F3F5F9; --surface:#FFFFFF; --ink:#1B2236; --muted:#5B647A; --line:#D5DAE6; --accent:#2B4BDB; --chip:#E6EBFB;
-  color-scheme:light;
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#10141F;--surface:#171C2B;--ink:#E8ECF6;--muted:#9AA3BA;--line:#2A3148;--accent:#8EA2FF;--chip:#222A44;color-scheme:dark}
-}
-:root[data-theme="dark"]{--bg:#10141F;--surface:#171C2B;--ink:#E8ECF6;--muted:#9AA3BA;--line:#2A3148;--accent:#8EA2FF;--chip:#222A44;color-scheme:dark}
+:root{--bg:#0B1020;--surface:#121936;--ink:#EEF1FA;--muted:#9AA5C4;--line:rgba(255,255,255,.1);--accent:#6C80FF;--chip:#1E2750;--side:#080C18;--sideink:#EEF1FA;--sidemuted:#9AA5C4;color-scheme:dark;box-sizing:border-box}
 *{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:1.15rem;line-height:1.65}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:1.05rem;line-height:1.7}
+h1,h2,h3,.nav,.meta,.tag,.btn{font-family:"DM Sans",system-ui,sans-serif}
 a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:.2em}
-a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
-h1,h2,h3,nav,.meta,.tag{font-family:"Bricolage Grotesque",system-ui,sans-serif}
-nav{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1.5rem 0;font-size:1rem;font-weight:600}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--ink)}
-nav .home{color:var(--ink);margin-right:auto}
-.hero{padding:clamp(3rem,10vw,8rem) 0 clamp(3rem,8vw,6rem)}
-h1{font-size:clamp(2.8rem,10vw,7.5rem);line-height:.92;letter-spacing:-.04em;font-weight:800;margin:0 0 2rem}
-.hero p{max-width:38rem;font-size:1.4rem;line-height:1.5;margin:0;color:var(--muted)}
-.hero p strong{color:var(--ink);font-weight:500}
-.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-.cta a{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:600;font-size:1rem;text-decoration:none;padding:.7rem 1.4rem;border-radius:99px;border:1px solid var(--ink)}
-.cta a:hover{border-color:var(--accent);color:var(--accent)}
-.cta a.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
-.cta a.primary:hover{color:var(--bg);opacity:.9}
-.core{margin-top:1.5rem}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:0 0 3rem}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem}
-.stat b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.7rem;letter-spacing:-.03em;line-height:1.15}
-.stat span{color:var(--muted);font-size:1rem;line-height:1.4;display:block;margin-top:.2rem}
-.hl{display:grid;grid-template-columns:repeat(2,1fr);gap:1.75rem 3rem}
-.hl h3{font-size:1.15rem;margin:0 0 .3rem;letter-spacing:-.01em}
-.hl p{margin:0;color:var(--muted);font-size:1.05rem;line-height:1.55}
-section{border-top:1px solid var(--line);padding:3rem 0}
-h2{font-size:1.05rem;font-weight:600;margin:0 0 2rem;color:var(--muted)}
-.meta{font-size:.95rem;color:var(--muted)}
-/* roadmap */
-.hint{margin:-1rem 0 2rem}
-.road{position:relative;list-style:none;margin:0;padding:0}
-.road::before{content:"";position:absolute;left:1.15rem;top:1rem;bottom:1rem;width:2px;background:var(--line)}
-.road li{position:relative;padding-left:3.5rem;margin-bottom:1.1rem}
-.node{position:absolute;left:0;top:1.1rem;width:2.3rem;height:2.3rem;border-radius:50%;background:var(--bg);border:2px solid var(--accent);display:grid;place-items:center;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:.85rem;font-weight:600;color:var(--accent);transition:background .15s,color .15s}
-.card{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem;cursor:pointer;transition:border-color .15s,transform .15s}
-.card:hover,.card:focus-visible{border-color:var(--accent);transform:translateX(4px)}
-.road li:hover .node{background:var(--accent);color:var(--bg)}
-.card h3{font-size:clamp(1.3rem,3.5vw,1.8rem);margin:0 0 .2rem;letter-spacing:-.02em;font-weight:600}
-.card p{margin:0 0 .8rem;color:var(--muted);font-size:1.05rem;line-height:1.5}
-.card .more{display:inline-block;margin-top:.8rem;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:.9rem;font-weight:600;color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+/* sidebar menu */
+.ribbon{position:sticky;top:0;z-index:10;background:rgba(8,12,24,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.rin{max-width:72rem;margin:0 auto;padding:.75rem clamp(1.25rem,5vw,4.5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;position:relative}
+.brand{font-weight:700;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink);white-space:nowrap}
+.nav{display:flex;gap:.25rem;font-weight:600;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--muted);padding:.45rem .9rem;border-radius:99px}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:#fff;background:rgba(255,255,255,.09)}
+.burger{display:none;width:2.6rem;height:2.6rem;place-items:center;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;cursor:pointer;padding:0}
+.burger:hover{border-color:var(--accent);color:var(--accent)}
+.burger svg{width:1.3rem;height:1.3rem;stroke:currentColor;stroke-width:2;stroke-linecap:round;fill:none}
+.burger .x,.burger[aria-expanded=true] .bars{display:none}.burger[aria-expanded=true] .x{display:block}
+main{padding:0 clamp(1.5rem,5vw,4.5rem)}
+main>section{max-width:54rem;margin-left:auto;margin-right:auto;padding:4rem 0;border-top:1px solid var(--line)}
+main>section:first-child{border-top:0;padding-top:2rem}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:.95;letter-spacing:-.04em;font-weight:800;margin:0 0 1.5rem}
+h2{font-size:1.6rem;letter-spacing:-.02em;font-weight:700;margin:0 0 1.5rem}
+h1.intro{font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.35;letter-spacing:-.02em;font-weight:600;max-width:44rem}
+/* #top{margin-top:1rem;padding:clamp(1.5rem,4vw,3rem);border:0;border-radius:0;background:linear-gradient(160deg,#0F1428,#161D3A);color:#9AA5C4;font-family:"DM Sans",system-ui,sans-serif} */
+#top h1.intro{font-family:"DM Sans",system-ui,sans-serif;font-size:clamp(1.15rem,2.4vw,1.55rem);line-height:1.7;font-weight:400;letter-spacing:0;color:#9AA5C4;max-width:46rem;margin:0}
+#top h1.intro b{color:#fff;font-weight:700}
+#top .cta{margin:2rem 0 0}
+#top .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:"DM Sans",system-ui,sans-serif;font-weight:700;font-size:1.05rem;color:#fff;border:1px solid rgba(255,255,255,.14);padding:.95rem 1.6rem}
+#top .btn:hover{border-color:#8EA2FF;color:#8EA2FF}
+#top .btn.primary{background:#6C80FF;border-color:#6C80FF;color:#10142A}
+#top .btn.primary:hover{color:#10142A;opacity:.9}
+#top .btn svg{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lead{font-size:1.15rem;line-height:1.5;max-width:40rem;margin:0 0 1rem}
+.muted,.meta{color:var(--muted)}
+.meta{font-size:.95rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.8rem 0}
+.btn{font-weight:700;font-size:1rem;color:var(--ink);background:transparent;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:.75rem 1.5rem;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.primary:hover{color:var(--bg);opacity:.9}
+.btn:disabled{opacity:.35;cursor:default}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .tag{font-size:.8rem;font-weight:600;padding:.15rem .6rem;border-radius:99px;background:var(--chip);color:var(--ink)}
-dialog{width:min(44rem,calc(100% - 1.5rem));max-height:86vh;padding:0;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);overflow:auto}
-dialog::backdrop{background:rgba(10,14,25,.6)}
-.dhead{position:sticky;top:0;background:var(--surface);display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem;border-bottom:1px solid var(--line)}
-.dbody{padding:1.5rem}
-.dbody h3{font-size:clamp(1.6rem,5vw,2.4rem);letter-spacing:-.03em;margin:0 0 .6rem;line-height:1.1}
-.dbody .ov{color:var(--muted);margin:0 0 1.2rem}
-.dbody ul{padding-left:1.1rem;margin:1.2rem 0}
-.dbody li{margin-bottom:.5rem}
-.dfoot{display:flex;justify-content:space-between;gap:1rem;padding:1rem 1.5rem;border-top:1px solid var(--line)}
-.btn{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:.95rem;font-weight:600;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:99px;padding:.45rem 1.1rem;cursor:pointer}
-.btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
-.btn:disabled{opacity:.35;cursor:default}
-.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-/* about + skills */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.about p{margin:0 0 1rem;max-width:34rem}
-.facts{list-style:none;margin:0;padding:0}
-.facts li{padding:.6rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem}
-.facts span{color:var(--muted);text-align:right}
-.edu li{align-items:flex-start;padding:1rem 0}
-.edu strong{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:600;font-size:1.15rem;letter-spacing:-.01em}
-.edu .sub{display:block;text-align:left;font-size:1.05rem}
-.skillgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 3rem}
-.skillgrid h3{font-size:1.1rem;margin:0 0 .4rem;letter-spacing:-.01em}
-.skillgrid p{margin:0;color:var(--muted);font-size:1.05rem;line-height:1.55}
-.contact a.big{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:clamp(1.6rem,6vw,3.6rem);font-weight:600;letter-spacing:-.03em;word-break:break-word}
-.links{display:flex;gap:1.5rem;margin-top:1.5rem;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1rem}
+/* experience timeline */
+.job h3{font-size:1.35rem;margin:0;letter-spacing:-.02em}
+.more{margin-top:1.2rem}
+.more summary{list-style:none;cursor:pointer;display:inline-flex;color:var(--accent);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:.2em;font-weight:600}
+.more summary::-webkit-details-marker{display:none}
+.more summary.btn{border:0;background:none;border-radius:0;padding:0;font:inherit}
+.more summary::after{content:"";margin-left:.6rem}
+.more[open] summary::after{content:"\2212"}
+.more[open] summary{color:var(--accent)}
+.more summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.job ul{padding-left:1.1rem;margin:1rem 0 0}
+.job li{margin-bottom:.5rem}
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.card{text-align:left;font:inherit;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem;cursor:pointer;display:flex;flex-direction:column;gap:.6rem}
+.card:hover{border-color:var(--accent)}
+.card h3{font-size:1.2rem;margin:0;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:1rem;line-height:1.5}
+.card .tags{margin-top:auto}
+/* skills, education, contact */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem 2.5rem}
+.skills h3{font-size:1.05rem;margin:0 0 .3rem}
+.skills p{margin:0;color:var(--muted);font-size:1.02rem;line-height:1.55}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{padding:.9rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem}
+.rows strong{font-family:"DM Sans",system-ui,sans-serif;font-weight:600}
+.rows .r{color:var(--muted);text-align:right;white-space:nowrap}
+.contact dl{display:grid;grid-template-columns:7rem 1fr;gap:.7rem 1rem;margin:0 0 1.5rem}
+.contact dt{color:var(--muted)}
+.contact dd{margin:0;word-break:break-word}
+.contact .big{font-family:"DM Sans",system-ui,sans-serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:500;letter-spacing:-.03em;word-break:break-word}
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
-@media (max-width:640px){
-  .road li{padding-left:3rem}
-  .dbody,.dhead,.dfoot{padding-left:1.1rem;padding-right:1.1rem}
-  .about,.skillgrid,.hl{grid-template-columns:1fr}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  nav{gap:1rem}
+/* dialog */
+dialog{width:min(44rem,calc(100% - 1.5rem));max-height:86vh;padding:0;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);overflow:auto}
+dialog::backdrop{background:rgba(10,14,25,.6)}
+.dhead,.dfoot{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem;background:var(--surface)}
+.dhead{position:sticky;top:0;border-bottom:1px solid var(--line)}
+.dfoot{border-top:1px solid var(--line)}
+.dbody{padding:1.5rem}
+.dbody h3{font-size:clamp(1.5rem,5vw,2.2rem);letter-spacing:-.03em;margin:0 0 .5rem;line-height:1.1}
+.dbody .ov{color:var(--muted);margin:0 0 1rem}
+.dbody ul{padding-left:1.1rem;margin:1.2rem 0 0}
+.dbody li{margin-bottom:.5rem}
+@media (max-width:860px){
+  main{padding-left:1.25rem;padding-right:1.25rem}
+  .burger{display:grid}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:.5rem 1rem 1rem;background:#080C18;border-bottom:1px solid var(--line)}
+  .nav.open{display:flex}
+  .nav a{border-radius:8px;padding:.8rem}
+  .grid,.skills{grid-template-columns:1fr}
+  .contact dl{grid-template-columns:1fr;gap:.1rem 0}
+  .contact dd{margin-bottom:.8rem}
+  .rows li{flex-direction:column;gap:.2rem}
+  .rows .r{text-align:left}
 }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <!-- EDIT: replace the email and the links with your own details -->
-  <nav>
-    <a class="home" href="#top"></a>
-    <a href="#work">Experience</a>
-    <a href="#work">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header class="hero" id="top">
-    <h1>Adarsh Kumar T G</h1>
-    <p><strong>Software engineer at Panacea Medical Technologies Pvt. Ltd., Bangalore.</strong> I build WPF desktop applications in C# and MVVM for medical imaging and radiotherapy, with basic DICOM and TPS knowledge, plus hardware integration, secure licensing and TFS-based CI/CD automation.</p>
-    <div class="cta">
-      <a class="primary" href="mailto:adarshkumartg9346@gmail.com">Email me</a>
-      <a href="#work">View projects</a>
-      <!-- EDIT: put your resume PDF next to this file and name it resume.pdf -->
-      <a href="resume.pdf" download>Download resume</a>
-    </div>
-    <div class="tags core"><span class="tag">C#</span><span class="tag">WPF</span><span class="tag">MVVM</span><span class="tag">.NET</span><span class="tag">SQL</span><span class="tag">LINQ</span><span class="tag">TCP/IP</span><span class="tag">IPC</span><span class="tag">TFS</span><span class="tag">CI/CD</span><span class="tag">DICOM (basic)</span></div>
-  </header>
-
-  <div class="stats">
-    <div class="stat"><b>2 years</b><span>Software development experience</span></div>
-    <div class="stat"><b>7</b><span>Projects across medical software, embedded and DevOps</span></div>
-    <div class="stat"><b>C# · WPF</b><span>MVVM architecture</span></div>
-    <div class="stat"><b>Bangalore</b><span>Panacea Medical Technologies Pvt. Ltd.</span></div>
+<header class="ribbon" id="ribbon">
+  <div class="rin">
+    <a class="brand" href="#top">Adarsh Kumar T G</a>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <section id="highlights">
-    <h2>Highlights</h2>
-    <div class="hl">
-      <div><h3>Medical software experience</h3><p>Worked on a mammography application and on Krystal, a radiotherapy TPS integration.</p></div>
-      <div><h3>Hardware integration from scratch</h3><p>Built the fingerprint sensor integration independently using TCP/IP sockets on a dedicated port.</p></div>
-      <div><h3>Touch-first interfaces</h3><p>Designed a virtual keyboard and touchpad on my own for touchscreen monitors.</p></div>
-      <div><h3>Smart screen layouts</h3><p>Built multi-monitor selection, quarter-screen sharing with another application, and compact to full-screen switching.</p></div>
-      <div><h3>Responsive with large data</h3><p>Kept the UI smooth with large data volumes, using charts, PDF reports and 3D animations driven by live values.</p></div>
-      <div><h3>Reusable and secure components</h3><p>Worked on a shared licensing solution using AES and SHA-512, packaged as DLLs for use across company projects.</p></div>
-      <div><h3>DevOps and CI/CD from scratch</h3><p>Set up TFS build agents, agent pools, queues and automated build and test pipelines for C# and WPF applications.</p></div>
-      <div><h3>Production releases and troubleshooting</h3><p>Handled production builds and deployments, and resolved build, pipeline and deployment failures.</p></div>
+<main>
+  <section id="top">
+    <h1 class="intro">I’m <b>Adarsh Kumar T G</b>, a Software Engineer at <b>Panacea Medical Technologies Pvt. Ltd.</b> with 2 years of experience developing Windows desktop applications using C#, .NET, WPF and MVVM. My work spans medical imaging and radiotherapy software, hardware integration, application communication, multi-monitor experiences, and TFS-based build and deployment automation.</h1>
+    <div class="cta">
+      <a class="btn primary" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contact me</a>
+      <!-- EDIT: put your resume PDF next to this file and name it resume.pdf -->
+      <a class="btn" href="resume.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0-5-5m5 5 5-5"/></svg>Download resume</a>
+      <a class="btn" href="#projects">Explore projects</a>
     </div>
   </section>
 
-  <section id="work">
-    <h2>Project roadmap</h2>
-    <p class="meta hint">Select any project to see its full details.</p>
-    <ol class="road" id="road"></ol>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Software Engineer</h3>
+      <!-- EDIT: confirm your exact joining month -->
+      <div class="meta">Panacea Medical Technologies Pvt. Ltd., Bangalore · 2024 to present · 2 years</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="meta">Select a project to see the full details.</p>
+    <div class="grid" id="grid"></div>
   </section>
 
   <section id="skills">
     <h2>Technical skills</h2>
-    <div class="skillgrid">
-      <div><h3>Languages</h3><p>C#, SQL, plus working knowledge of JavaScript, HTML5 and CSS3</p></div>
+    <div class="skills">
+      <div><h3>Languages</h3><p>C#, SQL, working knowledge of JavaScript, HTML5 and CSS3</p></div>
       <div><h3>Frameworks</h3><p>.NET Framework, WPF, MVVM, Windows Services, Windows Forms (basic)</p></div>
-      <div><h3>Architecture</h3><p>OOP, UI and backend development, IPC, memory-mapped files, TCP/IP, sockets, Windows service communication, multi-monitor and multi-application screen management, and strong LINQ query skills</p></div>
-      <div><h3>Database and data</h3><p>SQL queries, stored procedures, database operations, file operations, large dataset handling, data storage and retrieval</p></div>
-      <div><h3>Hardware integration</h3><p>Fingerprint sensors, touchscreens, Arduino-based embedded systems, Wi-Fi and network communication</p></div>
-      <div><h3>Medical software</h3><p>Basic DICOM and TPS operations, basic knowledge of the image processing workflow, radiotherapy data handling, patient information management</p></div>
-      <div><h3>UI and visualization</h3><p>Modern and responsive UI, virtual keyboard and touchpad, PDF generation and viewing, graphs and charts, 3D animation, dynamic data binding</p></div>
-      <div><h3>Security and deployment</h3><p>AES, SHA-512, license management, DLL development, EXE generation, setup file creation, packaging and deployment</p></div>
-      <div><h3>Performance</h3><p>Large data handling, UI responsiveness, application optimization, efficient data loading, avoiding UI freezes and lag</p></div>
-      <div><h3>DevOps and source control</h3><p>Microsoft TFS (2018), repository creation, commit, push and pull, CI/CD, build agents, agent pools, build queues, build definitions, automated builds and test execution, automated deployment, production release management, build and deployment troubleshooting</p></div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About</h2>
-    <div class="about">
-      <div>
-        <p>I’m a software engineer with two years of experience in software development, building desktop applications with WPF and C# using the MVVM architecture.</p>
-        <p>My work covers medical software, communication between processes and devices, and interfaces that stay responsive with large amounts of data. I currently work at Panacea Medical Technologies Pvt. Ltd. in Bangalore. I also set up TFS DevOps and CI/CD for our C# and WPF development environment.</p>
-      </div>
-      <ul class="facts">
-        <li>Company <span>Panacea Medical Technologies Pvt. Ltd.</span></li>
-        <li>Location <span>Bangalore, India</span></li>
-        <li>Experience <span>2 years</span></li>
-        <li>Main stack <span>C#, WPF, MVVM</span></li>
-        <li>Domain <span>Medical imaging, radiotherapy</span></li>
-        <li>Also <span>SQL; working HTML, CSS, JavaScript</span></li>
-        <li>DevOps <span>TFS (2018), CI/CD</span></li>
-      </ul>
+      <div><h3>Architecture</h3><p>OOP, IPC, memory-mapped files, TCP/IP, sockets, multi-monitor and multi-application screen management, LINQ</p></div>
+      <div><h3>Database and data</h3><p>SQL queries, stored procedures, file operations, large dataset handling</p></div>
+      <div><h3>Hardware integration</h3><p>Fingerprint sensors, touchscreens, Arduino-based embedded systems, Wi-Fi communication</p></div>
+      <div><h3>Medical software</h3><p>Basic DICOM and TPS operations, image processing workflow basics, radiotherapy data handling</p></div>
+      <div><h3>UI and visualization</h3><p>Responsive UI, virtual keyboard and touchpad, PDF generation and viewing, charts, 3D animation, data binding</p></div>
+      <div><h3>Security and deployment</h3><p>AES, SHA-512, license management, DLL development, setup files, packaging</p></div>
+      <div><h3>DevOps</h3><p>Microsoft TFS (2018), repositories, CI/CD, build agents and pools, build definitions, automated tests and deployment, release troubleshooting</p></div>
     </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <!-- EDIT: copy an <li> to add another qualification -->
-    <ul class="facts edu">
-      <li><div><strong>Master of Computer Applications (MCA)</strong><span class="sub">The Oxford College of Engineering, Bengaluru</span></div><span>CGPA 7.01<br>June 2024</span></li>
-      <li><div><strong>Bachelor of Computer Applications (B.Sc. Computer Science)</strong><span class="sub">The National College, Basavanagudi, Bengaluru</span></div><span>CGPA 6.09<br>September 2022</span></li>
-      <li><div><strong>Pre-University (PCMCS, Computer Science)</strong><span class="sub">BGS PU College, Chikkaballapur</span></div><span>CGPA 8.00<br>March 2019</span></li>
+    <ul class="rows">
+      <li><div><strong>Master of Computer Applications (MCA)</strong><br><span class="muted">The Oxford College of Engineering, Bengaluru</span></div><span class="r">CGPA 7.01<br>June 2024</span></li>
+      <li><div><strong>Bachelor of Computer Applications (B.Sc. Computer Science)</strong><br><span class="muted">The National College, Basavanagudi, Bengaluru</span></div><span class="r">CGPA 6.09<br>September 2022</span></li>
+      <li><div><strong>Pre-University (PCMCS, Computer Science)</strong><br><span class="muted">BGS PU College, Chikkaballapur</span></div><span class="r">CGPA 8.00<br>March 2019</span></li>
     </ul>
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <a class="big" href="mailto:adarshkumartg9346@gmail.com">adarshkumartg9346@gmail.com</a>
-    <div class="links">
-      <a href="#top">LinkedIn</a>
-      <a href="#top">GitHub</a>
-      <a href="#top">Resume</a>
-    </div>
+    <h3>Contact</h3>
+    <p class="lead">Open to software engineering roles in desktop, medical and DevOps work. The best way to reach me is email.</p>
+    <!-- <p><a class="big" href="mailto:adarshkumartg9346@gmail.com">adarshkumartg9346@gmail.com</a></p> -->
+    <dl>
+      <dt>Gmail</dt><dd><a href="mailto:adarshkumartg9346@gmail.com">adarshkumartg9346@gmail.com</a></dd><!-- EDIT -->
+      <dt>Phone</dt><dd><a href="tel:+91 6360571460">+91 6360571460</a></dd><!-- EDIT -->
+      <dt>Location</dt><dd>Bangalore, Karnataka, India</dd>
+      <!-- <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/your-profile">-</a></dd>EDIT
+      <dt>GitHub</dt><dd><a href="https://github.com/your-username">-</a></dd>EDIT -->
+    </dl>
   </section>
-
   <footer>© 2026 Adarsh Kumar T G</footer>
-</div>
+</main>
 
 <dialog id="dlg" aria-labelledby="dtitle">
   <div class="dhead"><span class="meta" id="dstep"></span><button class="btn" id="dclose" type="button">Close</button></div>
   <div class="dbody"><h3 id="dtitle"></h3><p class="ov" id="dov"></p><div class="tags" id="dtags"></div><ul id="dlist"></ul></div>
-  <div class="dfoot"><button class="btn" id="dprev" type="button">← Previous</button><button class="btn" id="dnext" type="button">Next →</button></div>
+  <div class="dfoot"><button class="btn" id="dprev" type="button">Previous</button><button class="btn" id="dnext" type="button">Next</button></div>
 </dialog>
 <script>
-/* EDIT: your projects live here. Each has a title (t), summary (s), tags and detail bullets (d). */
 var P=[
-{t:"Mammography software",s:"A medical imaging application covering UI, backend, database operations and image-handling workflows.",
- tags:["C#","WPF",".NET","MVVM","IPC","TCP/IP"],
- d:["Worked on front-end UI, backend functionality, application workflows and data operations.","Gained basic knowledge of the medical image processing workflow and mammography image handling.","Connected application processes using memory-mapped files and TCP/IP with port-based communication.","Built a multi-monitor setting so users choose which monitor runs the application.","Built a screen layout where the application takes one quarter of the screen and an image processing application uses the rest.","Switched the application between a compact layout and full screen based on user interaction.","Showed menu options when idle, then expanded to full screen when the user needs to work.","Designed touch-friendly interfaces for touch-enabled monitors."]},
-{t:"Virtual keyboard and touchpad",s:"Designed and built independently so the mammography application works smoothly on touchscreens.",
- tags:["C#","WPF",".NET","Touch UI","Event handling"],
- d:["Designed and developed a virtual keyboard from scratch.","Built a virtual touchpad that supports mouse-like interaction on touch displays.","Created responsive, touch-friendly UI components.","Integrated both inputs into the mammography application, improving usability and accessibility."]},
-{t:"Fingerprint sensor integration",s:"Hardware-to-software integration built from scratch using TCP/IP sockets on a dedicated port.",
- tags:["C#",".NET","TCP/IP","Sockets","Hardware"],
- d:["Implemented the whole integration independently.","Established communication between the fingerprint hardware and the application using socket programming.","Used port-based communication to exchange data between hardware and software.","Gained practical experience integrating external devices with desktop applications."]},
-{t:"Embedded system web UI over Wi-Fi",s:"A responsive web interface hosted on an embedded board that controls hardware over Wi-Fi.",
- tags:["HTML","CSS","JavaScript","Arduino","Wi-Fi"],
- d:["Designed a modern, user-friendly web interface with layouts that adapt to different screen sizes.","Deployed the UI onto an embedded electronic board or Wi-Fi module.","Built Wi-Fi communication between the web interface and the hardware.","Created UI components that trigger and monitor hardware functions on Arduino-based systems."]},
-{t:"Krystal: radiotherapy TPS integration",s:"An application that exchanges patient, plan, image and dose data with treatment planning systems using DICOM.",
- tags:["C#","WPF","DICOM","SQL","PDF","3D"],
- d:["Worked on TPS integration to exchange radiotherapy information, with basic DICOM knowledge for plans, images and dose data.","Handled patient information management, database operations, and data storage and retrieval.","Generated customized PDF documents with dynamically populated patient and treatment data, and integrated a PDF viewer.","Handled large data volumes while keeping the application responsive and avoiding UI freezes.","Built graphs and charts for clearer data visualization.","Implemented 3D animations driven by live backend values."]},
-{t:"Common license management system",s:"A centralized licensing solution shared across multiple company projects for generating, verifying and validating licenses.",
- tags:["C#",".NET","AES","SHA-512","DLL"],
+{t:"Mammography software",s:"A medical imaging application covering UI, backend, database operations and image-handling workflows.",tags:["C#","WPF","MVVM","IPC","TCP/IP"],
+ d:["Worked on front-end UI, backend functionality, application workflows and data operations.","Gained basic knowledge of the medical image processing workflow.","Connected application processes using memory-mapped files and TCP/IP with port-based communication.","Built a multi-monitor setting so users choose which monitor runs the application.","Built a layout where the application takes one quarter of the screen and an image processing application uses the rest.","Switched between a compact layout and full screen based on user interaction.","Designed touch-friendly interfaces for touch-enabled monitors."]},
+{t:"Virtual keyboard and touchpad",s:"Designed and built independently so the mammography application works smoothly on touchscreens.",tags:["C#","WPF","Touch UI"],
+ d:["Designed and developed a virtual keyboard from scratch.","Built a virtual touchpad that supports mouse-like interaction on touch displays.","Created responsive, touch-friendly UI components.","Integrated both inputs into the mammography application."]},
+{t:"Fingerprint sensor integration",s:"Hardware-to-software integration built from scratch using TCP/IP sockets on a dedicated port.",tags:["C#","TCP/IP","Sockets","Hardware"],
+ d:["Implemented the whole integration independently.","Established communication between the fingerprint hardware and the application using socket programming.","Used port-based communication to exchange data between hardware and software."]},
+{t:"Embedded system web UI over Wi-Fi",s:"A responsive web interface hosted on an embedded board that controls hardware over Wi-Fi.",tags:["HTML","CSS","JavaScript","Arduino","Wi-Fi"],
+ d:["Designed a user-friendly web interface that adapts to different screen sizes.","Deployed the UI onto an embedded board or Wi-Fi module.","Built Wi-Fi communication between the web interface and the hardware.","Created UI components that trigger and monitor hardware functions on Arduino-based systems."]},
+{t:"Krystal: radiotherapy TPS integration",s:"An application that exchanges patient, plan, image and dose data with treatment planning systems using DICOM.",tags:["C#","WPF","DICOM","SQL","PDF","3D"],
+ d:["Worked on TPS integration to exchange radiotherapy information, with basic DICOM knowledge.","Handled patient information management, database operations, and data storage and retrieval.","Generated customized PDF documents with dynamically populated data, and integrated a PDF viewer.","Kept the application responsive with large data volumes, avoiding UI freezes.","Built graphs and charts, and 3D animations driven by live backend values."]},
+{t:"Common license management system",s:"A centralized licensing solution shared across multiple company projects.",tags:["C#","AES","SHA-512","DLL"],
  d:["Built one licensing solution that works across several company applications.","Used AES encryption and decryption, and SHA-512 hashing for integrity and verification.","Used system-specific information to generate licenses and check their authenticity.","Packaged reusable components as DLLs and generated EXE applications."]},
-{t:"TFS DevOps and CI/CD automation",s:"Recent project: set up TFS DevOps from scratch for the C#, .NET and WPF development environment, from source control to automated production deployment.",
- tags:["TFS","CI/CD","Build agents","Pipelines","Automation","C#","WPF"],
- d:["Implemented and configured the TFS DevOps infrastructure from scratch and integrated it into the C#, .NET and WPF development environment.","Configured and managed build agents, agent pools, build queues, build definitions and automated workflows.","Designed automated build pipelines for C# and WPF desktop applications.","Added automated test case execution to the build workflows to validate application quality.","Automated application build generation, setup configuration and deployment.","Configured end-to-end build and release workflows, including automated production deployment.","Managed production builds and deployments, and troubleshot and fixed build failures, pipeline errors and deployment issues.","Integrated source control, build automation, testing and release management into the development lifecycle.","Familiar with TFS (2018) server operations such as creating repositories and committing, pushing and pulling code."]}
+{t:"TFS DevOps and CI/CD automation",s:"Set up TFS DevOps from scratch for the C#, .NET and WPF environment, from source control to automated production deployment.",tags:["TFS","CI/CD","Pipelines","C#","WPF"],
+ d:["Configured the TFS infrastructure from scratch and integrated it into the development environment.","Managed build agents, agent pools, build queues, build definitions and automated workflows.","Designed automated build pipelines for C# and WPF desktop applications.","Added automated test execution to the build workflows.","Automated build generation, setup configuration and deployment, including production release.","Troubleshot build failures, pipeline errors and deployment issues.","Familiar with TFS (2018) operations such as creating repositories and committing, pushing and pulling code."]}
 ];
-var road=document.getElementById("road"),dlg=document.getElementById("dlg"),cur=0,opener=null;
+var grid=document.getElementById("grid"),dlg=document.getElementById("dlg"),cur=0,opener=null;
 function pad(n){return (n<10?"0":"")+n}
-function chips(el,arr){el.textContent="";arr.forEach(function(x){var s=document.createElement("span");s.className="tag";s.textContent=x;el.appendChild(s)})}
+function chips(el,a){el.textContent="";a.forEach(function(x){var s=document.createElement("span");s.className="tag";s.textContent=x;el.appendChild(s)})}
 P.forEach(function(p,i){
-  var li=document.createElement("li"),n=document.createElement("span"),b=document.createElement("button"),h=document.createElement("h3"),d=document.createElement("p"),t=document.createElement("div"),m=document.createElement("span");
-  n.className="node";n.textContent=pad(i+1);n.setAttribute("aria-hidden","true");
-  b.className="card";b.type="button";h.textContent=p.t;d.textContent=p.s;t.className="tags";chips(t,p.tags);m.className="more";m.textContent="View details →";
-  b.append(h,d,t,m);li.append(n,b);road.appendChild(li);
+  var b=document.createElement("button"),h=document.createElement("h3"),d=document.createElement("p"),t=document.createElement("div");
+  b.className="card";b.type="button";h.textContent=p.t;d.textContent=p.s;t.className="tags";chips(t,p.tags);
+  b.append(h,d,t);grid.appendChild(b);
   b.addEventListener("click",function(){opener=b;show(i);if(!dlg.open)dlg.showModal()});
 });
 function show(i){
   cur=i;var p=P[i];
-  document.getElementById("dstep").textContent="Step "+pad(i+1)+" of "+pad(P.length);
+  document.getElementById("dstep").textContent="Project "+(i+1)+" of "+P.length;
   document.getElementById("dtitle").textContent=p.t;
   document.getElementById("dov").textContent=p.s;
   chips(document.getElementById("dtags"),p.tags);
@@ -266,6 +239,18 @@ document.getElementById("dprev").addEventListener("click",function(){if(cur>0)sh
 document.getElementById("dnext").addEventListener("click",function(){if(cur<P.length-1)show(cur+1)});
 dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
 dlg.addEventListener("close",function(){if(opener)opener.focus()});
+/* ribbon menu: on small screens the icon opens a dropdown; any outside click, link click or Esc closes it */
+var nav=document.getElementById("nav"),burger=document.getElementById("burger");
+function setMenu(o){nav.classList.toggle("open",o);burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Close menu":"Open menu")}
+burger.addEventListener("click",function(e){e.stopPropagation();setMenu(!nav.classList.contains("open"))});
+document.addEventListener("click",function(e){if(nav.classList.contains("open")&&(!nav.contains(e.target)||e.target.closest("a")))setMenu(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){setMenu(false);burger.focus()}});
+/* highlight the current section in the menu */
+var links=document.querySelectorAll("#nav a"),secs=document.querySelectorAll("main>section");
+function spy(){var y=window.scrollY+window.innerHeight*0.3,id=secs[0].id;
+  secs.forEach(function(s){if(s.offsetTop<=y)id=s.id});
+  links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+id)})}
+window.addEventListener("scroll",spy,{passive:true});spy();
 </script>
 </body>
 </html>
